@@ -9,6 +9,7 @@ project 1 - A Random Quote Generator
 
 /*** 
  * `quotes` array 
+ * This array contains objects to store quote information (quote, source, citation, year)
 ***/
 const quotes = [
   {
@@ -35,7 +36,7 @@ const quotes = [
     source: "Nikki Giovanni"
   },
   {
-    quote: 'It is not the eyes are blind, but the hearts.',
+    quote: 'It is not the eyes that are blind, but the hearts.',
     source: 'Surah Al-Haj, [22:46]'
   },
 ];
@@ -43,6 +44,8 @@ const quotes = [
 
 /***
  * `getRandomQuote` function
+ * This function uses the Math.random and Math.floor functions to get a random number between 0 and the length of the quotes array.
+ * It then returns the quote object at the index of the random number
 ***/
 function getRandomQuote(arr) {
   const randomNum = Math.floor(Math.random() * arr.length);
@@ -51,6 +54,9 @@ function getRandomQuote(arr) {
 
 /***
  * `printQuote` function
+ * This function calls the getRandomQuote function 
+ * It then creates an HTML string to display the quote on the web page.
+ * The if loops check if the quote object has a citation and/or year property to add to the HTML string.
 ***/
 function printQuote() {
   const quote = getRandomQuote(quotes);
