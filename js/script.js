@@ -20,7 +20,7 @@ const quotes = [
   {
     quote: "I do not live in the prison of other people's opinion.",
     source: 'Dr. Umar Abdullah Johnson',
-    year: '2016'
+    year: 2016
   },
   {
     quote: "It's better to walk alone than with a crowd going in the wrong direction.",
@@ -80,7 +80,7 @@ function updateBackgroundColor() {
  * This function first calls the updateBackgroundColor function to change the background color.
  * It then calls the getRandomQuote function.
  * Then it creates an HTML string to display the random quote on the web page.
- * The if loops check if the quote object has a citation, year,  and/or tags property to add to the HTML string.
+ * The if statements check if the quote object has a citation, year,  and/or tags property to add to the HTML string.
 ***/
 function printQuote() {
   updateBackgroundColor();
@@ -107,12 +107,12 @@ function printQuote() {
 
 /*
   * `timing` function
-  * This function uses the setInterval method to call the printQuote() function every 10 seconds.
+  * This function uses the setInterval() method to call the printQuote() function every 10 seconds.
   * This is so that a new quote gets printed to te page every 10 seconds.
 */
 
 function timing() {
-  setInterval(printQuote, 10000);
+  setInterval(printQuote, 5000);
 };
 
 timing()
